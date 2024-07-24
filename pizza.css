@@ -1,0 +1,166 @@
+/* styles.css */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url(Veggie-Lovers.png);
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #ffffff; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.Cart {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: grey;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.Cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.Cart th, .Cart td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 3px solid #7b8a99;
+}
+
+.Cart th {
+    background-color: #555555;
+    color: white;
+}
+
+.Cart td {
+    background-color: burlywood;
+}
+
+.Cart .total-row {
+    font-weight: bold;
+}
+
+.Cart .pay-now-row {
+    background-color:black;
+}
+
+.Cart .pay-now-row input {
+    padding: 5px;
+    width: 100px;
+}
+
+.Cart button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.Cart button:hover {
+    background-color: #218838;
+}
+
+.meessage {
+    margin-bottom: 20px;
+    color: #dc3545;
+    text-align: center;
+}
+
+.pizzas {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: darkturquoise;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pizza h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pizza-item {
+    background-color: darksalmon;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-item h5 {
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.pizza-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pizza-item strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .Cart, .pizza {
+        padding: 10px;
+    }
+
+    .Cart th, .Cart td {
+        padding: 5px;
+    }
+
+    .pizza-item {
+        padding: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+[x-cloak] { display: none !important; }
