@@ -76,18 +76,76 @@
     </table>
 </div>
  <div class="featured-pizzas">
-<template x-for="pizza in featuredPizzas">
+  <template x-for="pizza in featuredPizzas">
+    <div class="featured" x-show="username && cartId">
+      <img src="small.jfif" alt="Pizza" width="124">
+      <h4 x-text="pizza.flavour"></h4>
+      <h5>R <span x-text="pizza.price"></span></h5>
+      <p x-text="pizza.size"></p>
+      <button class="btn" @click="addPizza(pizza.id)">Buy</button>
+    </div>
+  </template>
+</div>
 
-   <div class="featured" x-shows="username && cartId">
-    <img src="small.jfif" alt="Pizza" width="124">
-    <h4 x-text="pizza.flavour"></h4>
-    <h5>R <span x-text="pizza.price"></span></h5>
-    <p x-text="pizza.size"></p>
-     <button class="btn" @click="addPizza(pizza.id)">Buy</button>
+<style>
+  .featured-pizzas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-   </div> 
-</template>
- </div>
+  .featured {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 items per row */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s; /* Add transition for hover effect */
+  }
+
+  .featured:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+  }
+
+  @media (max-width: 1024px) {
+    .featured {
+      flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured {
+      flex: 1 1 calc(100% - 1rem); /* 1 item per row */
+      padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+  }
+
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Ensure button is full width on small screens */
+  }
+
+  .btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
 
 
 </div>
